@@ -1,7 +1,7 @@
 import numpy as np
 
 def rosenbrock(x:np.ndarray) -> float:
-    return sum(100 * (x[i+1] - x[i]**2)**2 + (1 - x[i])**2 for i in range(len(x) - 1))
+    return float(sum(100 * (x[i+1] - x[i]**2)**2 + (1 - x[i])**2 for i in range(len(x) - 1)))
 
 def rosenbrock_grad(x:np.ndarray) -> np.ndarray:
     N = x.shape[0]
